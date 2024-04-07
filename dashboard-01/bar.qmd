@@ -1,0 +1,44 @@
+--- 
+title: "Palmer Penguins"
+author: "Cobblepot Analytics"
+format: 
+  dashboard:
+    logo: images/penguins.png
+    nav-buttons: [linkedin, twitter, github]
+---
+
+# Bills 
+
+```{python}
+print("Hallo 1")
+```
+
+# Flippers {orientation="columns" scrolling="true"}
+
+## Column
+
+```{python}
+print("Hallo 2")
+```
+
+::: {.card title="My Title"}
+This text will be displayed within a card
+:::
+
+```{python}
+print("Hallo 3")
+```
+
+## Column 
+
+```{python}
+from ipyleaflet import Map, basemaps, basemap_to_tiles
+
+lat = 48
+long = 350
+
+print("title=", f"World Map at {lat}, {long}")
+
+Map(basemap=basemap_to_tiles(basemaps.OpenStreetMap.Mapnik),
+    center=(lat, long), zoom=2)
+```
